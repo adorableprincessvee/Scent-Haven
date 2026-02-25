@@ -116,13 +116,15 @@ const Cart = () => {
               <span>₦{(getTotalPrice() + getTotalPrice() * 0.08).toFixed(2)}</span>
             </div>
 
-            <Link to="/checkout" className={styles.checkoutBtn}>
-              Proceed to Checkout
-            </Link>
+            <div className={styles.buttonGrid}>
+              <Link to="/checkout" className={styles.checkoutBtn}>
+                Proceed to Checkout
+              </Link>
 
-            <button className={styles.clearCartBtn} onClick={clearCart}>
-              Clear Cart
-            </button>
+              <button className={styles.clearCartBtn} onClick={clearCart}>
+                Clear Cart
+              </button>
+            </div>
 
             <Link to="/product" className={styles.continueShopping}>
               Continue Shopping

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
 
 const CartContext = createContext();
 
@@ -12,17 +12,28 @@ export const useCart = () => {
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
+  const isInitialized = useRef(false);
 
   // Load cart from localStorage on mount
   useEffect(() => {
+    if (isInitialized.current) return; // Prevent double execution in Strict Mode
+    isInitialized.current = true;
+
     const savedCart = localStorage.getItem('cart');
     if (savedCart) {
-      setCartItems(JSON.parse(savedCart));
+      try {
+        const parsedCart = JSON.parse(savedCart);
+        setCartItems(parsedCart);
+      } catch (error) {
+        console.error('Error parsing cart from localStorage:', error);
+        localStorage.removeItem('cart'); // Clear corrupted data
+      }
     }
   }, []);
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
+    if (!isInitialized.current) return; // Don't save until initialized
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 

@@ -206,7 +206,7 @@
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   transition: all 0.3s ease;
   box-sizing: border-box;
 }
@@ -214,6 +214,13 @@
 .checkoutBtn:hover {
   background: #cc7245;
   transform: translateY(-2px);
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .clearCartBtn {
@@ -225,7 +232,7 @@
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   transition: all 0.3s ease;
 }
 
@@ -406,6 +413,11 @@
   .clearCartBtn {
     padding: 0.8rem;
     font-size: 1rem;
+  }
+
+  .buttonGrid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
   }
 
   .emptyCartContent h1 {

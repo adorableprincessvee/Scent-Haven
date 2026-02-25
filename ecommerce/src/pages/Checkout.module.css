@@ -142,7 +142,7 @@
 /* ORDER SUMMARY */
 .orderSummary {
   background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 15px;
   border: 1px solid rgba(171, 87, 45, 0.2);
   height: fit-content;
@@ -158,14 +158,14 @@
 }
 
 .orderItems {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .orderItem {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -180,8 +180,8 @@
 }
 
 .itemInfo img {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 8px;
   object-fit: cover;
 }
@@ -409,7 +409,7 @@
   }
 
   .orderSummary {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 
   .successPopup {
