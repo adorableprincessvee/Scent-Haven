@@ -1,0 +1,198 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: #111;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.hamburgerMenu{
+  display: none;
+}
+.logo {
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #AB572D;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav a::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background: #AB572D;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+.nav a:hover {
+  color: #AB572D;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+.icon {
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.2);
+  color: #AB572D;
+}
+
+.cartIcon {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cartCount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #AB572D;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border: 2px solid #111;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  overflow: hidden;
+  transition: 0.4s;
+  background: transparent;
+}
+
+.searchBox input {
+  width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+  transition: 0.4s;
+}
+
+.searchBox svg {
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  padding: 0.4rem 1rem;
+}
+
+.active input {
+  width: 160px;
+  padding-right: 0.5rem;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #111;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  z-index: 10;
+}
+
+.dropdown li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 300;
+  transition: background 0.3s;
+}
+
+.dropdown li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Highlight effect when search finds element */
+.highlight {
+  background: rgba(217, 119, 6, 0.4);
+  transition: background 0.5s ease;
+}
+
+/* Hamburger only on mobile */
+.hamburgerMenu {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Mobile nav menu */
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 1rem;
+  background: rgba(0,0,0,0.95);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.mobileNav a {
+  margin: 0.5rem 0;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobileNav a:hover {
+  color: #AB572D;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    display: none; 
+  }
+  .icons {
+    display: none;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
+}
