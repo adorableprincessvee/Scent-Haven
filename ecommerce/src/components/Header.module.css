@@ -198,8 +198,13 @@
 }
 
 /* Floating cart icon for mobile */
+.floatingCart {
+  display: none; /* Hidden by default on desktop */
+}
+
 @media (max-width: 768px) {
   .floatingCart {
+    display: flex; /* Show only on mobile */
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -207,12 +212,12 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
   }
 
   .floatingCart:hover {
