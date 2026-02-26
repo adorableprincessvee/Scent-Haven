@@ -39,7 +39,7 @@ const Checkout = () => {
     setTimeout(() => {
       clearCart();
       navigate('/');
-    }, 3000);
+    }, 8000);
   };
 
   const subtotal = getTotalPrice();
