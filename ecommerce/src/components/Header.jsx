@@ -63,6 +63,12 @@ const Header = () => {
         </nav>
       )}
 
+      {/* Floating cart icon for mobile */}
+      <Link to="/cart" className={styles.floatingCart}>
+        <FaShoppingCart className={styles.icon} />
+        {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
+      </Link>
+
       {/* Icons + search */}
       <div className={styles.icons}>
         <div

@@ -1,0 +1,117 @@
+.servicesContainer {
+  min-height: 100vh;
+}
+
+.heroSection {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(17, 17, 17, 0.8));
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.heroSection h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.servicesSection {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 60px;
+  padding: 60px 40px;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #000, #111);
+  color: white;
+}
+
+.serviceItem:nth-child(even) {
+  background: linear-gradient(to right, #111 50%, #000 100%);
+}
+
+.serviceItem:nth-child(odd) {
+  background: linear-gradient(to bottom, #000, #111);
+}
+
+.leftLayout {
+  flex-direction: row;
+}
+
+.rightLayout {
+  flex-direction: row-reverse;
+}
+
+.serviceContent {
+  flex: 1;
+}
+
+.serviceNumber {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #AB572D;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.serviceContent h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #AB572D;
+  font-family: 'Playfair Display', serif;
+}
+
+.serviceContent p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.serviceImage {
+  flex: 1;
+}
+
+.serviceImage img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .serviceItem {
+    flex-direction: column !important;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .serviceContent,
+  .serviceImage {
+    padding: 0;
+  }
+
+  .heroSection h1 {
+    font-size: 2rem;
+  }
+
+  .serviceNumber {
+    font-size: 3rem;
+  }
+
+  .serviceContent h2 {
+    font-size: 1.5rem;
+  }
+}
