@@ -64,7 +64,7 @@ const Blog = () => {
     setIndex(0);
   }, [filter, searchTerm]);
 
-  // ✅ SINGLE subscribe function (fixed)
+  //  SINGLE subscribe function (fixed)
   const handleSubscribe = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

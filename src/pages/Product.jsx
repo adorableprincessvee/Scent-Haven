@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Select from "react-select";
-import styles from "./product.module.css";
+import styles from "./Product.module.css";
 import offerImg from "../assets/aqua-serenity.png";
 import angelImg from "../assets/golden-angel.png";
 import Footer from "../components/Footer";
