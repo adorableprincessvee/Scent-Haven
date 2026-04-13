@@ -69,7 +69,7 @@ const Wishlist = () => {
 
         <div className={styles.wishlistSummary}>
           <div className={styles.summaryCard}>
-            <h2>Wishlist Actions</h2>
+            <h2>Wishlist </h2>
 
             <div className={styles.buttonGrid}>
               <Link to="/product" className={styles.browseBtn}>

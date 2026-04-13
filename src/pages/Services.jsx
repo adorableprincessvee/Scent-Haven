@@ -8,37 +8,37 @@ const Services = () => {
       number: '01',
       title: 'Personal Fragrance Consultations',
       description: 'Discover your perfect scent with our expert consultants. We analyze your preferences, lifestyle, and personality to recommend fragrances that truly reflect who you are.',
-      image: ''
+      image: '/images/s1.png'
     },
     {
       number: '02',
       title: 'Custom Fragrance Creation',
       description: 'Create a one-of-a-kind fragrance tailored specifically to your desires. Our master perfumers work with you to blend unique scents that tell your story.',
-      image: ''
+      image: '/images/s2.png'
     },
     {
       number: '03',
       title: 'Scented Gift Selection',
       description: 'Find the perfect scented gift for any occasion. Our curated selection includes luxury fragrances, diffusers, and personalized scent experiences.',
-      image: ''
+      image: '/images/s3.png'
     },
     {
       number: '04',
       title: 'Fragrance Events and Workshops',
       description: 'Join our exclusive fragrance events and workshops. Learn about perfumery, participate in scent creation sessions, and connect with fellow fragrance enthusiasts.',
-      image: ''
+      image: '/images/s4.png'
     },
     {
       number: '05',
       title: 'Eco-friendly Initiatives',
       description: 'We\'re committed to sustainability. Our eco-friendly initiatives include recyclable packaging, ethically sourced ingredients, and carbon-neutral shipping.',
-      image: ''
+      image: '/images/s5.png'
     },
     {
       number: '06',
       title: 'Online Shopping Convenience',
       description: 'Shop fragrances from the comfort of your home with our user-friendly online platform. Enjoy secure payments, fast delivery, and personalized recommendations.',
-      image: ''
+      image: '/images/s6.png'
     }
   ];
 

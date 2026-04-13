@@ -1,0 +1,298 @@
+ack instead of white.blogPage {
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, #AB572D 0%, #cc7245 50%, #d97706 100%);
+  padding: 100px 20px 80px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../assets/perfume.png') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.searchContainer {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.15);
+  color: #f0f0f0;
+  font-size: 1.05rem;
+  backdrop-filter: blur(10px);
+}
+
+.searchInput::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.searchBtn {
+  padding: 15px 30px;
+  background: #AB572D;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.searchBtn:hover {
+  background: #cc7245;
+  transform: translateY(-3px);
+}
+
+.filters {
+  padding: 40px 20px;
+  background: linear-gradient(to bottom, #000, #111);
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.filterBtn {
+  padding: 12px 24px;
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.filterBtn:hover,
+.filterBtn.active {
+  background: #AB572D;
+  border-color: #AB572D;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(171,87,45,0.3);
+}
+
+.articlesSection {
+  padding: 80px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+  .articlesSection {
+    padding: 60px 10px;
+  }
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionTitle h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+  color: #AB572D;
+}
+
+.sectionTitle p {
+  font-size: 1.2rem;
+  color: #bbb;
+}
+
+.sliderWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideGroup {
+  display: flex;
+  flex: 0 0 100%;
+  gap: 30px;
+  padding: 0 50px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.arrow:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow:first-child {
+  left: 20px;
+}
+
+.arrow:last-child {
+  right: 20px;
+}
+
+.newsletter {
+  background: linear-gradient(135deg, #AB572D 0%, #cc7245 100%);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.newsletter h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.newsletter p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.newsletterForm {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.newsletterForm input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.newsletterForm input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.newsletterForm button {
+  padding: 15px 30px;
+  background: #AB572D;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.newsletterForm button:hover {
+  background: #cc7245;
+  transform: translateY(-3px);
+}
+
+.subscribePopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #AB572D, #cc7245);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(171,87,45,0.3);
+}
+
+.subscribePopup p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.subscribePopup button {
+  background: #cc7245;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .searchContainer,
+  .newsletterForm,
+  .filterButtons {
+    flex-direction: column;
+  }
+  
+  .filterBtn {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
+
