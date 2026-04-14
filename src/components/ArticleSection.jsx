@@ -67,7 +67,7 @@ export default function ArticlesSection() {
       const width = window.innerWidth;
 
       if (width <= 768) {
-        setVisibleCards(1);        // Mobile 
+        setVisibleCards(1);        // Mobile - 1 card slider
       } else if (width <= 1024) {
         setVisibleCards(2);        // Tablet
       } else {
@@ -81,15 +81,17 @@ export default function ArticlesSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalSlides = Math.ceil(articlesData.length / visibleCards);
+const totalSlides = Math.ceil(articlesData.length / visibleCards);
 
   const [index, setIndex] = useState(0);
 
   const nextSlide = () => {
+    if (totalSlides <= 1) return;
     setIndex((prev) => (prev + 1) % totalSlides);
   };
 
   const prevSlide = () => {
+    if (totalSlides <= 1) return;
     setIndex((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
@@ -141,6 +143,19 @@ export default function ArticlesSection() {
           ›
         </button>
       </div>
+
+      {/* Slide indicators */}
+      {totalSlides > 1 && (
+        <div className={styles.dots}>
+          {Array.from({ length: totalSlides }).map((_, dotIndex) => (
+            <button
+              key={dotIndex}
+              className={`${styles.dot} ${index === dotIndex ? styles.activeDot : ''}`}
+              onClick={() => setIndex(dotIndex)}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

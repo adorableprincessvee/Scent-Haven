@@ -207,27 +207,77 @@
   border: 2px solid #111;
 }
 
-/* Responsive */
+/* Mobile icons - now inline beside hamburger */
+.mobileIcons {
+  display: none;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.mobileSearchBox {
+  /* Reuse searchBox styles */
+}
+
+.mobileSearchBox.active input {
+  width: 120px;
+}
+
+.mobileWishlistIcon {
+  /* Inline style similar to desktop */
+  position: relative;
+}
+
 @media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  
   .nav {
     display: none; 
   }
+  
   .icons {
     display: none;
   }
+  
   .hamburgerMenu {
     display: block;
   }
+  
+  .mobileIcons {
+    display: flex;
+  }
+  
+  .mobileSearchBox.active {
+    padding: 0.3rem 0.8rem;
+  }
+  
+.mobileSearchBox input {
+    width: 0;
+    padding: 0;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+  }
+  
+  .wishlistCount {
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+  }
 }
 
-/* Floating cart icon for mobile */
+/* Floating cart unchanged */
 .floatingCart {
-  display: none; /* Hidden by default on desktop */
+  display: none;
 }
 
 @media (max-width: 768px) {
   .floatingCart {
-    display: flex; /* Show only on mobile */
+    display: flex;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -270,3 +320,4 @@
     border: 2px solid #AB572D;
   }
 }
+

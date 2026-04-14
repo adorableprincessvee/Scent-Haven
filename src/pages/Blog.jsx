@@ -48,16 +48,17 @@ const Blog = () => {
     setIndex(prev => (prev === 0 ? totalSlides - 1 : prev - 1));
   };
 
-  // Auto slide
+  // Auto slide only non-mobile
+  const isMobile = visibleCards === 1;
   useEffect(() => {
-    if (totalSlides === 0) return;
+    if (totalSlides === 0 || isMobile) return;
 
     const interval = setInterval(() => {
       setIndex(prev => (prev + 1) % totalSlides);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [totalSlides]);
+  }, [totalSlides, isMobile]);
 
   // Reset index when filter/search changes
   useEffect(() => {

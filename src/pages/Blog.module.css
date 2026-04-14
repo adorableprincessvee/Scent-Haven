@@ -150,6 +150,29 @@ ack instead of white.blogPage {
   border-radius: 20px;
 }
 
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover,
+.dot.activeDot {
+  background: #AB572D;
+  transform: scale(1.2);
+}
+
 .slider {
   overflow: hidden;
 }
@@ -289,10 +312,35 @@ ack instead of white.blogPage {
   .filterButtons {
     flex-direction: column;
   }
+
+  .slider {
+    width: 100vw;
+    margin: 0 calc(-50vw + 50%);
+  }
+
+  .slideGroup {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+  .card {
+    flex: none;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
   
   .filterBtn {
     flex: 1 1 100%;
     text-align: center;
+  }
+
+  .arrow {
+    display: none;
   }
 }
 

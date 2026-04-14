@@ -76,16 +76,17 @@ const Cart = () => {
                 </button>
               </div>
 
-              <div className={styles.itemTotal}>
-                <p>₦{item.price * item.quantity}</p>
+              <div className={styles.controlsRow}>
+                <div className={styles.itemTotal}>
+                  <p>₦{item.price * item.quantity}</p>
+                </div>
+                <button
+                  className={styles.removeBtn}
+                  onClick={() => handleRemoveItem(item.id)}
+                >
+                  <FaTrash />
+                </button>
               </div>
-
-              <button
-                className={styles.removeBtn}
-                onClick={() => handleRemoveItem(item.id)}
-              >
-                <FaTrash />
-              </button>
             </div>
           ))}
         </div>
